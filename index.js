@@ -56,15 +56,18 @@ bookStore.books.forEach(book => {
     const bookTitle = document.createElement("h3")
     const bookAuthor = document.createElement("p")
     const bookImage = document.createElement("img")
-
+    // add li element in html for each book
     bookList.append(bookContainer)
-
+    // set h3's text to book title for each element of h3
     bookTitle.textContent = book.title
+    // append each h3 element in li element
     bookContainer.append(bookTitle)
-
+    // set each paragraph element's text to book author's name
     bookAuthor.textContent = book.author
+    // append it to li as well
     bookContainer.append(bookAuthor)
-
+    // set image's src to correct book's image 
     bookImage.src = book.imageUrl
+    // append image to li element
     bookContainer.append(bookImage)
 })
