@@ -51,12 +51,6 @@ const bookList = document.querySelector("#book-list")
 
 
 bookStore.books.forEach(book => {
-    // select elements of html to store books
-    const bookContainer = document.querySelector("li")
-    const bookTitle = document.querySelector("h3")
-    const bookAuthoer = document.querySelector("p")
-    const bookImage = document.querySelector("img")
-
     // create elements 
     const container = document.createElement("li")
     const title = document.createElement("h3")
@@ -64,7 +58,13 @@ bookStore.books.forEach(book => {
     const img = document.createElement("img")
 
     bookList.append(container)
-    container.append(title.textContent = book.title)
-    container.append(author.textContent = book.author)
-    container.append(img.imageUrl = book.imageUrl)
+
+    title.textContent = book.title
+    container.append(title)
+
+    author.textContent = book.author
+    container.append(author)
+    
+    img.src = book.imageUrl
+    container.append(img)
 })
